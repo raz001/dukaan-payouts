@@ -1,8 +1,8 @@
-import React from 'react'
+import React from 'react';
+import Overview from './Overview';
 const Header = () => {
     return (
         <>     
-            <section class="payouts">
                 <div class="header">
                     <div class="header__heading">
                         <div class="heading__title">Payouts</div>
@@ -48,10 +48,7 @@ const Header = () => {
 
                         </div>
                     </div>
-                </div>
-
-                
-            </section>
+                </div>   
         </>
     )
 }

@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { ReactComponent as Home } from '../assets/home.svg';
 import { ReactComponent as Order } from '../assets/order.svg'
 import { ReactComponent as Products } from '../assets/products.svg';

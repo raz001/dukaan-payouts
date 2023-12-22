@@ -129,9 +129,9 @@ aside {
   overflow: auto;
 }
 
-.mobile-screen {
+/* .mobile-screen {
   display: none;
-}
+} */
 
 /* Payouts Section */
 
@@ -204,4 +204,140 @@ aside {
   border-radius: 100%;
   cursor: pointer;
   color: var(--dukaan-gray-700);
+}
+
+
+.overview-wrapper {
+  padding: 32px;
+}
+
+.overview {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.overview .overview__title {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.overview .overview__filter {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border: 1px solid var(--dukaan-gray-300);
+  border-radius: 4px;
+  background-color: white;
+  color: var(--dukaan-gray-700);
+}
+
+.overview-cards {
+  margin-top: 28px;
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.cards__card {
+  padding: 24px 20px;
+  background-color: white;
+  border-radius: 8px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  height: fit-content;
+  position: relative;
+}
+
+.cards__card .card__header {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  color: var(--dukaan-gray-700);
+}
+
+.cards__card .card__body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cards__card .card__body .amount {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.cards__card .card__body .info {
+  display: flex;
+  gap: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--dukaan-blue-400);
+  cursor: pointer;
+}
+
+.card__body .info .info__text {
+  text-decoration: underline;
+}
+
+.card__body .info svg {
+  margin-top: 2px;
+  rotate: 270deg;
+}
+
+.active-card {
+  padding: 24px 0 0;
+  background: var(--dukaan-blue-400);
+  color: white;
+  width: 100%;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  height: fit-content;
+}
+
+.active-card .card__body,
+.active-card .card__header {
+  padding: 0 20px;
+}
+
+.active-card .card__header {
+  display: flex;
+  gap: 6px;
+  font-weight: 300;
+  align-items: center;
+}
+
+.active-card .card__body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.active-card .card__body .amount {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.active-card .card__body .info {
+  display: flex;
+  gap: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.active-card .card__next {
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 300;
+  border-radius: 8px;
+  background-color: var(--dukaan-blue-600);
 }
