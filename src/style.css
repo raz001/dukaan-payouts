@@ -124,18 +124,11 @@ aside {
   color: white;
 }
 
-.payouts {
-  flex: 1 1 0;
-  overflow: auto;
-}
-
-/* .mobile-screen {
-  display: none;
-} */
-
 /* Payouts Section */
 
 .payouts {
+  flex: 1 1 0;
+  overflow: auto;
   background-color: var(--dukaan-gray-100);
 }
 
@@ -156,6 +149,7 @@ aside {
 .header .header__heading .heading__title {
   font-size: 20px;
   font-weight: 500;
+  color: #1A181E;
 }
 
 .header .header__heading .heading__info {
@@ -220,6 +214,8 @@ aside {
 .overview .overview__title {
   font-size: 20px;
   font-weight: 500;
+  color: #1A181E;
+
 }
 
 .overview .overview__filter {
@@ -340,4 +336,151 @@ aside {
   font-weight: 300;
   border-radius: 8px;
   background-color: var(--dukaan-blue-600);
+}
+
+.transactions {
+  padding: 0px 32px;
+}
+
+.transactions .transactions__title {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.transactions .transactions__filters {
+  margin-top: 20px;
+  display: flex;
+  gap: 16px;
+}
+
+.transactions .transactions__filters div {
+  padding: 6px 14px;
+  background-color: var(--dukaan-gray-200);
+  border-radius: 200px;
+  font-size: 14px;
+  color: var(--dukaan-gray-600);
+}
+
+.transactions .transactions__table {
+  margin-top: 20px;
+  background-color: white;
+  border-radius: 6px;
+  padding: 8px 10px;
+}
+
+.transactions .transactions__table .table__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.transactions__table .table__header .table__search {
+  padding: 6px 8px 6px 12px;
+  border: 1px solid var(--dukaan-gray-300);
+  border-radius: 4px;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  width: 240px;
+  color: var(--dukaan-gray-600);
+}
+
+.table__header .table__search input {
+  padding: 4px 0;
+  font-size: 14px;
+  font-family: Inter, sans-serif;
+  outline: none;
+  border: none;
+  width: 100%;
+}
+
+.table__header .table__search input::placeholder {
+  color: var(--dukaan-gray-600);
+}
+
+.transactions__table .table__header .table__actions {
+  display: flex;
+  gap: 20px;
+}
+
+.transactions__table .table__header .table__actions div {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border: 1px solid var(--dukaan-gray-300);
+  border-radius: 4px;
+  background-color: white;
+  color: var(--dukaan-gray-700);
+}
+
+.transactions__table .table-wrapper {
+  margin-top: 10px;
+  width: 100%;
+}
+
+.transactions__table .table-wrapper table {
+  width: 100%;
+  font-size: 14px;
+  border-collapse: collapse;
+}
+
+.table-wrapper table thead {
+  background-color: var(--dukaan-gray-100);
+  color: var(--dukaan-gray-600);
+  font-weight: 400;
+  text-align: left;
+}
+
+.table-wrapper table thead tr th {
+  padding: 14px 12px;
+  font-weight: 500;
+  color: var(--dukaan-gray-800);
+}
+
+.table-wrapper table thead th:last-child,
+table tbody td:last-child {
+  text-align: right;
+}
+
+.table-wrapper table tbody tr {
+  border-bottom: 2px solid var(--dukaan-gray-100);
+}
+
+.table-wrapper table tbody tr:last-child {
+  border: 0;
+}
+
+.table-wrapper table tbody tr td {
+  padding: 14px 12px;
+}
+
+.td-date {
+  color: var(--dukaan-blue-400);
+  font-weight: 500;
+}
+
+.td-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.td-trans,
+.td-total {
+  color: var(--dukaan-gray-800);
+}
+
+.status-processing {
+  height: 8px;
+  width: 8px;
+  border-radius: 100%;
+  background-color: #999;
+}
+
+.status-success {
+  height: 8px;
+  width: 8px;
+  border-radius: 100%;
+  background-color: #17b31b;
 }
