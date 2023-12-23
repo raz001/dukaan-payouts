@@ -10,6 +10,7 @@ import { ReactComponent as Discounts } from '../assets/discounts.svg';
 import { ReactComponent as Audience } from '../assets/audience.svg';
 import { ReactComponent as Appearance } from '../assets/appearance.svg';
 import { ReactComponent as Plugins } from '../assets/plugins.svg';
+import ImageSVG from '../assets/image.svg'
 const Sidebar = () => {
 
     const arr = [
@@ -30,7 +31,7 @@ const Sidebar = () => {
             <div className="sidebar">
                 <div className="user">
                     <div className="user__logo">
-                        <img src="image.svg" alt="logo" />
+                        <img src={ImageSVG} alt="logo" />
                     </div>
                     <div className="user__details">
                         <div className="name">Nishyan</div>
