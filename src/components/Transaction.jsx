@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-const mockArr = [
+const payoutArr = [
     { date: 'Today, 09:00 PM', status: "Processing", ID: '131634495747', amount: "₹10,125.00", fees: '₹1,125.00', total: '₹9,312' },
     { date: 'Today, 03:00 PM', status: "Successful", ID: '131634495747', amount: "₹10,125.00", fees: '₹1,125.00', total: '₹9,312' },
     { date: 'Today, 09:00 AM', status: "Successful", ID: '131634495747', amount: "₹10,125.00", fees: '₹1,125.00', total: '₹9,312' },
@@ -9,14 +9,23 @@ const mockArr = [
     { date: 'Yesterday, 09:00 AM', status: "Successful", ID: '131634495747', amount: "₹10,125.00", fees: '₹1,125.00', total: '₹9,312' },
     { date: '12 Jul 2023, 11:00 AM', status: "Successful", ID: '131634495747', amount: "₹10,125.00", fees: '₹1,125.00', total: '₹9,312' },
 ];
+
+const refundArr = [
+    { orderID: '281209', status: 'Successful', transID: '131634495747', refundData: 'Today, 08:45 PM', orderAmount: '₹1,125.00' },
+    { orderID: '281208', status: 'Processing', transID: '131634495747', refundData: 'Yesterday, 3:00 PM', orderAmount: '₹1,125.00' },
+    { orderID: '281207', status: 'Successful', transID: '131634495747', refundData: '12 Jul 2023, 03:00 PM', orderAmount: '₹1,125.00' },
+    { orderID: '281206', status: 'Successful', transID: '131634495747', refundData: '12 Jul 2023, 03:00 PM', orderAmount: '₹1,125.00' },
+    { orderID: '281205', status: 'Successful', transID: '131634495747', refundData: '12 Jul 2023, 03:00 PM', orderAmount: '₹1,125.00' },
+    { orderID: '281204', status: 'Successful', transID: '131634495747', refundData: '12 Jul 2023, 03:00 PM', orderAmount: '₹1,125.00' }
+]
 const Transaction = () => {
-    
+    const [state, setState] = useState('Payouts');
     return (
         <section class="transactions">
             <div class="transactions__title">Transactions | This Month</div>
             <div class="transactions__filters">
-                <div style={{ color: "white", backgroundColor: '#146eb4' }}>Payouts (22)</div>
-                <div>Refunds (2)</div>
+                <div style={{ color: state === 'Payouts' ? 'white' : '', backgroundColor: state === 'Payouts' ? '#146eb4' : '', cursor: 'pointer' }} onClick={() => setState('Payouts')}>Payouts (22)</div>
+                <div style={{ color: state === 'Refunds' ? 'white' : '', backgroundColor: state === 'Refunds' ? '#146eb4' : '', cursor: 'pointer' }} onClick={() => setState('Refunds')}>Refunds (6)</div>
             </div>
 
             <div class="transactions__table">
@@ -54,33 +63,61 @@ const Transaction = () => {
                 </div>
 
                 <div class="table-wrapper">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Date</th>
-                                <th>Status</th>
-                                <th>Transaction ID</th>
-                                <th>Order amount</th>
-                                <th>Transaction fees</th>
-                                <th>Total</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {mockArr.map((td) => (
+                    {
+                        state === 'Payouts' ? <table>
+                            <thead>
                                 <tr>
-                                    <td class="td-date">{td.date}</td>
-                                    <td class="td-status">
-                                        <div className={td.status === 'Successful' ? "status-success" : "status-processing"}></div>{td.status}
-                                    </td>
-                                    <td class="td-trans">{td.ID}</td>
-                                    <td>{td.amount}</td>
-                                    <td>{td.fees}</td>
-                                    <td class="td-total">{td.total}</td>
+                                    <th>Date</th>
+                                    <th>Status</th>
+                                    <th>Transaction ID</th>
+                                    <th>Order amount</th>
+                                    <th>Transaction fees</th>
+                                    <th>Total</th>
                                 </tr>
-                            ))}
+                            </thead>
+                            <tbody>
+                                {payoutArr.map((td) => (
+                                    <tr>
+                                        <td class="td-date">{td.date}</td>
+                                        <td class="td-status">
+                                            <div className={td.status === 'Successful' ? "status-success" : "status-processing"}></div>{td.status}
+                                        </td>
+                                        <td class="td-trans">{td.ID}</td>
+                                        <td>{td.amount}</td>
+                                        <td>{td.fees}</td>
+                                        <td class="td-total">{td.total}</td>
+                                    </tr>
+                                ))}
 
-                        </tbody>
-                    </table>
+                            </tbody>
+                        </table> : <table>
+                            <thead>
+                                <tr>
+                                    <th>Order ID</th>
+                                    <th>Status</th>
+                                    <th>Transaction ID</th>
+                                    <th>Refund date</th>
+                                    <th>Order amount</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {refundArr.map((td) => (
+                                    <tr>
+                                        <td class="td-date">{td.orderID}</td>
+                                        <td class="td-status">
+                                            <div className={td.status === 'Successful' ? "status-success" : "status-processing"}></div>{td.status}
+                                        </td>
+                                        <td class="td-trans">{td.transID}</td>
+                                        <td>{td.refundData}</td>
+                                        <td>{td.orderAmount}</td>
+                                    </tr>
+                                ))}
+
+                            </tbody>
+                        </table>
+
+                    }
+
                 </div>
             </div>
         </section>
