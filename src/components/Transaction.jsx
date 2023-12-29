@@ -11,12 +11,12 @@ const payoutArr = [
 ];
 
 const refundArr = [
-    { orderID: '281209', status: 'Successful', transID: '131634495747', refundData: 'Today, 08:45 PM', orderAmount: '₹1,125.00' },
-    { orderID: '281208', status: 'Processing', transID: '131634495747', refundData: 'Yesterday, 3:00 PM', orderAmount: '₹1,125.00' },
-    { orderID: '281207', status: 'Successful', transID: '131634495747', refundData: '12 Jul 2023, 03:00 PM', orderAmount: '₹1,125.00' },
-    { orderID: '281206', status: 'Successful', transID: '131634495747', refundData: '12 Jul 2023, 03:00 PM', orderAmount: '₹1,125.00' },
-    { orderID: '281205', status: 'Successful', transID: '131634495747', refundData: '12 Jul 2023, 03:00 PM', orderAmount: '₹1,125.00' },
-    { orderID: '281204', status: 'Successful', transID: '131634495747', refundData: '12 Jul 2023, 03:00 PM', orderAmount: '₹1,125.00' }
+    { orderID: '#281209', status: 'Successful', transID: '131634495747', refundData: 'Today, 08:45 PM', orderAmount: '₹1,125.00' },
+    { orderID: '#281208', status: 'Processing', transID: '131634495747', refundData: 'Yesterday, 3:00 PM', orderAmount: '₹1,125.00' },
+    { orderID: '#281207', status: 'Successful', transID: '131634495747', refundData: '12 Jul 2023, 03:00 PM', orderAmount: '₹1,125.00' },
+    { orderID: '#281206', status: 'Successful', transID: '131634495747', refundData: '12 Jul 2023, 03:00 PM', orderAmount: '₹1,125.00' },
+    { orderID: '#281205', status: 'Successful', transID: '131634495747', refundData: '12 Jul 2023, 03:00 PM', orderAmount: '₹1,125.00' },
+    { orderID: '#281204', status: 'Successful', transID: '131634495747', refundData: '12 Jul 2023, 03:00 PM', orderAmount: '₹1,125.00' }
 ]
 const Transaction = () => {
     const [state, setState] = useState('Payouts');
@@ -28,7 +28,7 @@ const Transaction = () => {
                 <div style={{ color: state === 'Refunds' ? 'white' : '', backgroundColor: state === 'Refunds' ? '#146eb4' : '', cursor: 'pointer' }} onClick={() => setState('Refunds')}>Refunds (6)</div>
             </div>
 
-            <div class="transactions__table">
+            <div style={{padding: '12px 12px 8px 12px', borderRadius:'8px'}} class="transactions__table">
                 <div class="table__header">
                     <div class="table__search">
                         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
