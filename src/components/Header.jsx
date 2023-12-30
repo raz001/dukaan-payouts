@@ -1,5 +1,6 @@
 import React from 'react';
 const Header = () => {
+    
     return (
         <>
             <div class="header">
@@ -42,11 +43,7 @@ const Header = () => {
                             </svg>
                         </div>
                         <input class="box__input" type="text" 
-                        style={{fontSize: "15px",
-                            fontStyle: "normal",
-                            fontWeight: 400,
-                            lineHeight: "22px", 
-                              color: '#808080'}}
+                       
                         placeholder="Search features, tutorials, etc." />
                     </div>
                 </div>

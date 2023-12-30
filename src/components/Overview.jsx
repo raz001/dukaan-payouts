@@ -5,7 +5,7 @@ const Overview = () => {
             <div class="overview">
                 <div class="overview__title">Overview</div>
                 <div class="overview__filter">
-                    <span>This month</span>
+                    <span>This Month</span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                         <path d="M2.27748 5.77748C2.61381 5.44114 3.14013 5.41057 3.511 5.68575L3.61726 5.77748L8 10.1598L12.3827 5.77748C12.7191 5.44114 13.2454 5.41057 13.6163 5.68575L13.7225 5.77748C14.0589 6.11381 14.0894 6.64013 13.8142 7.011L13.7225 7.11726L8.66989 12.1699C8.33355 12.5062 7.80724 12.5368 7.43636 12.2616L7.33011 12.1699L2.27748 7.11726C1.90751 6.74729 1.90751 6.14745 2.27748 5.77748Z" fill="#4D4D4D" />
                     </svg>
@@ -14,7 +14,16 @@ const Overview = () => {
             <div class="overview-cards">
                 <div class="active-card">
                     <div class="card__header">
-                        <div class="title">Next Payout</div>
+                        <div class="title"
+                        // style={{
+                        //     color: "#FFF",
+                        //     fontFamily: "Inter",
+                        //     fontSize: "16px",
+                        //     fontStyle: "normal",
+                        //     fontWeight: 400,
+                        //     lineHeight: "24px"
+                        // }}
+                        >Next Payout</div>
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                             <g clip-path="url(#clip0_39208_34111)">
                                 <path fillRule="evenodd" clipRule="evenodd" d="M8.8856 11.6358C8.8856 12.1266 8.48772 12.5245 7.9969 12.5245C7.50609 12.5245 7.1082 12.1266 7.1082 11.6358C7.1082 11.145 7.50609 10.7471 7.9969 10.7471C8.48772 10.7471 8.8856 11.145 8.8856 11.6358Z" fill="white" />
@@ -42,14 +51,43 @@ const Overview = () => {
                         </div>
                     </div>
                     <div class="card__next">
-                        <div class="title">Next payout date:</div>
-                        <div class="text">Today, 04:00PM</div>
+                        <div class="title"
+                        // style={{
+                        //     color: "#F2F2F2",
+                        //     fontFamily: "Inter",
+                        //     fontSize: "14px",
+                        //     fontStyle: "normal",
+                        //     fontWeight: 400,
+                        //     lineHeight: "20px"
+                        // }}
+                        >Next payout date:</div>
+                        <div class="text"
+                        // style={{
+                        //     color: "#F2F2F2",
+                        //     fontSize: "14px",
+                        //     fontStyle: "normal",
+                        //     fontWeight: 500,
+                        //     lineHeight: "20px"
+                        // }} 
+                        >Today, 04:00PM</div>
                     </div>
                 </div>
 
-                <div class="cards__card">
+                <div style={{
+                    boxShadow: "0px 2px 6px 0px rgba(26, 24, 30, 0.04)",
+                    borderRadius: '8px'
+                }} class="cards__card">
                     <div class="card__header">
-                        <div class="title">Amount Pending</div>
+                        <div class="title"
+                        // style={{
+                        //     color: "#4D4D4D",
+                        //     fontFamily: "Inter",
+                        //     fontSize: "16px",
+                        //     fontStyle: "normal",
+                        //     fontWeight: 400,
+                        //     lineHeight: "24px"
+                        // }}
+                        >Amount Pending</div>
                         <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
                             <path fillRule="evenodd" clipRule="evenodd" d="M9.54966 11.6358C9.54966 12.1266 9.15178 12.5245 8.66096 12.5245C8.17015 12.5245 7.77227 12.1266 7.77227 11.6358C7.77227 11.145 8.17015 10.7471 8.66096 10.7471C9.15178 10.7471 9.54966 11.145 9.54966 11.6358Z" fill="#4D4D4D" />
                             <path fillRule="evenodd" clipRule="evenodd" d="M7.66328 3.89508C8.13964 3.69776 8.66381 3.64614 9.16951 3.74673C9.67521 3.84732 10.1397 4.09561 10.5043 4.4602C10.8689 4.82479 11.1172 5.2893 11.2178 5.79501C11.3184 6.30071 11.2668 6.82488 11.0694 7.30124C10.8721 7.7776 10.538 8.18475 10.1093 8.47121C9.8303 8.65761 9.51944 8.78746 9.19425 8.85542V8.96969C9.19425 9.26425 8.95547 9.50303 8.66092 9.50303C8.36637 9.50303 8.12758 9.26425 8.12758 8.96969V8.37723C8.12758 8.23578 8.18377 8.10012 8.28379 8.0001C8.38381 7.90008 8.51947 7.84389 8.66092 7.84389C8.96556 7.84389 9.26336 7.75356 9.51666 7.58431C9.76996 7.41506 9.96738 7.1745 10.084 6.89304C10.2005 6.61159 10.2311 6.30189 10.1716 6.0031C10.1122 5.70431 9.96549 5.42986 9.75007 5.21444C9.53466 4.99903 9.2602 4.85233 8.96141 4.7929C8.66263 4.73347 8.35292 4.76397 8.07147 4.88055C7.79002 4.99713 7.54946 5.19456 7.38021 5.44786C7.21096 5.70116 7.12062 5.99896 7.12062 6.3036C7.12062 6.59815 6.88184 6.83693 6.58729 6.83693C6.29274 6.83693 6.05395 6.59815 6.05395 6.3036C6.05395 5.78799 6.20685 5.28396 6.49331 4.85525C6.77976 4.42653 7.18692 4.09239 7.66328 3.89508Z" fill="#4D4D4D" />
@@ -59,20 +97,32 @@ const Overview = () => {
                     <div class="card__body">
                         <div class="amount">₹92,312.20</div>
                         <div class="info">
-                            <div class="info__text">13 orders</div>
+                            <div
+                                style={{ color: "#146EB4" }}
+                                class="info__text">13 orders</div>
                             <svg height="16px" width="16px" xmlns="http://www.w3.org/2000/svg" fill="none"
                                 viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
                                 class="svg-chevron-down-icon">
                                 <path stroke-linecap="round" stroke-linejoin="round"
                                     d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
                             </svg>
-
                         </div>
                     </div>
                 </div>
-                <div class="cards__card">
+                <div style={{
+                    boxShadow: "0px 2px 6px 0px rgba(26, 24, 30, 0.04)"
+                }} class="cards__card">
                     <div class="card__header">
-                        <div class="title">Amount Processed</div>
+                        <div class="title"
+                        // style={{
+                        //     color: "#4D4D4D",
+                        //     fontFamily: "Inter",
+                        //     fontSize: "16px",
+                        //     fontStyle: "normal",
+                        //     fontWeight: 400,
+                        //     lineHeight: "24px"
+                        // }}
+                        >Amount Processed</div>
                         <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
                             <path fillRule="evenodd" clipRule="evenodd" d="M9.22154 11.6358C9.22154 12.1266 8.82365 12.5245 8.33284 12.5245C7.84202 12.5245 7.44414 12.1266 7.44414 11.6358C7.44414 11.145 7.84202 10.7471 8.33284 10.7471C8.82365 10.7471 9.22154 11.145 9.22154 11.6358Z" fill="#4D4D4D" />
                             <path fillRule="evenodd" clipRule="evenodd" d="M7.33515 3.89508C7.81151 3.69776 8.33568 3.64614 8.84138 3.74673C9.34709 3.84732 9.8116 4.09561 10.1762 4.4602C10.5408 4.82479 10.7891 5.2893 10.8897 5.79501C10.9903 6.30071 10.9386 6.82488 10.7413 7.30124C10.544 7.7776 10.2099 8.18475 9.78114 8.47121C9.50218 8.65761 9.19132 8.78746 8.86613 8.85542V8.96969C8.86613 9.26425 8.62734 9.50303 8.33279 9.50303C8.03824 9.50303 7.79946 9.26425 7.79946 8.96969V8.37723C7.79946 8.23578 7.85565 8.10012 7.95567 8.0001C8.05569 7.90008 8.19134 7.84389 8.33279 7.84389C8.63743 7.84389 8.93523 7.75356 9.18853 7.58431C9.44184 7.41506 9.63926 7.1745 9.75584 6.89304C9.87242 6.61159 9.90293 6.30189 9.84349 6.0031C9.78406 5.70431 9.63736 5.42986 9.42195 5.21444C9.20653 4.99903 8.93208 4.85233 8.63329 4.7929C8.3345 4.73347 8.0248 4.76397 7.74335 4.88055C7.46189 4.99713 7.22133 5.19456 7.05208 5.44786C6.88283 5.70116 6.7925 5.99896 6.7925 6.3036C6.7925 6.59815 6.55371 6.83693 6.25916 6.83693C5.96461 6.83693 5.72583 6.59815 5.72583 6.3036C5.72583 5.78799 5.87873 5.28396 6.16518 4.85525C6.45164 4.42653 6.85879 4.09239 7.33515 3.89508Z" fill="#4D4D4D" />

@@ -16,11 +16,17 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   font-family: Inter, sans-serif;
   background-color: white;
 }
 
+/* @font-face {
+  font-family: "Galano Grotesque";
+  src: url('./font/GalanoGrotesqueDEMO-Bold.otf');
+ 
+ } */
 .main {
   display: flex;
 }
@@ -144,17 +150,14 @@ aside {
   align-items: center;
   gap: 16px;
   flex: 1 0 0;
-
 }
 
 .header .header__heading .heading__title {
-  
   font-size: 20px;
-  font-style: normal;
   font-weight: 500;
+  font-style: normal;
   line-height: 28px;
   color: #1A181E;
-  
 }
 
 .header .header__heading .heading__info {
@@ -174,17 +177,18 @@ aside {
   flex-shrink: 0;
   align-self: stretch;
   border-radius: 6px;
-  background-color: #F2F2F2;
+  background: #F2F2F2;
 
 }
 
 .header__search .search__box input {
   outline: none;
   border: none;
-  background-color: transparent;
+  background: transparent;
   font-family: Inter, sans-serif;
   font-style: normal;
   font-weight: 400;
+  line-height: 22px;
   width: 100%;
 
 }
@@ -231,6 +235,8 @@ aside {
 .overview .overview__title {
   font-size: 20px;
   font-weight: 500;
+  font-style: normal;
+  line-height: 28px;
   color: #1A181E;
 
 }
@@ -240,22 +246,32 @@ aside {
   align-items: center;
   gap: 6px;
   padding: 6px 10px;
-  border: 1px solid var(--dukaan-gray-300);
+  border: 1px solid #D9D9D9;
   border-radius: 4px;
-  background-color: white;
+  background-color: #FFF;
   color: var(--dukaan-gray-700);
+}
+
+.overview .overview__filter span {
+  color: var(--Black-30, #4D4D4D);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
 }
 
 .overview-cards {
   margin-top: 28px;
-  display: flex;
-  justify-content: space-between;
   gap: 24px;
+  display: flex;
+  align-items: flex-start;
+  gap: var(--Spacing-spacing-07, 20px);
+  align-self: stretch;
 }
 
 .cards__card {
   padding: 24px 20px;
-  background-color: white;
+  background-color: #FFFFFF;
   border-radius: 8px;
   width: 100%;
   display: flex;
@@ -263,6 +279,7 @@ aside {
   gap: 16px;
   height: fit-content;
   position: relative;
+
 }
 
 .cards__card .card__header {
@@ -279,8 +296,10 @@ aside {
 }
 
 .cards__card .card__body .amount {
-  font-size: 28px;
-  font-weight: 600;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 38px;
 }
 
 .cards__card .card__body .info {
@@ -293,24 +312,31 @@ aside {
 }
 
 .card__body .info .info__text {
-  text-decoration: underline;
+  /* color: var(--Black-100, #FFF);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; */
+  text-decoration-line: underline;
 }
 
 .card__body .info svg {
   margin-top: 2px;
   rotate: 270deg;
+  
 }
 
 .active-card {
   padding: 24px 0 0;
-  background: var(--dukaan-blue-400);
+  background: #146EB4;
   color: white;
   width: 100%;
-  border-radius: 6px;
+  border-radius: 8px;
   display: flex;
   flex-direction: column;
   gap: 16px;
   height: fit-content;
+
 }
 
 .active-card .card__body,
@@ -332,8 +358,10 @@ aside {
 }
 
 .active-card .card__body .amount {
-  font-size: 28px;
-  font-weight: 600;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 38px;
 }
 
 .active-card .card__body .info {
@@ -455,6 +483,7 @@ aside {
 }
 
 .table-wrapper table thead tr th {
+
   padding: 14px 12px;
   font-weight: 500;
   color: var(--dukaan-gray-800);
@@ -478,6 +507,7 @@ table tbody td:last-child {
 }
 
 .td-date {
+
   color: var(--dukaan-blue-400);
   font-weight: 500;
 }
